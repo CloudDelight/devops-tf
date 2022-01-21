@@ -1,1 +1,10 @@
-terraform init
+
+pipeline {
+    agent none
+    stage('terraform plan') {
+       steps {
+           sh "terraform init"
+       } 
+    }
+}
+
