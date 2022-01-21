@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('terraform plan') {
        steps {
-           sh "sudo terraform init"
+           sh "terraform -v"
        } 
     }
     }
