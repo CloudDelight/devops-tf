@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage ('terraform plan') {
        steps {
+         withAWS(credentials: 'test-user', region: 'us-east-1')
            sh "terraform -v"
            sh "terraform init"
            sh "terraform plan"
