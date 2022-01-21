@@ -1,5 +1,7 @@
 pipeline {
     agent any
+     tools {
+      terraform "Terraform1.0.0"
     stages {
         stage ('terraform plan') {
        steps {
