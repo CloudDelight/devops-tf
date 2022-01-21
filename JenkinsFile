@@ -1,10 +1,11 @@
-
 pipeline {
     agent none
-    stage('terraform plan') {
+    stages {
+        stage ('terraform plan') {
        steps {
            sh "terraform init"
        } 
+    }
     }
 }
 
